@@ -139,7 +139,7 @@ namespace Vchasno
         {
             error = "";
             string responseBody = null;
-            if (response.StatusCode != HttpStatusCode.OK || response.StatusCode != HttpStatusCode.Created || response.StatusCode != HttpStatusCode.Accepted)
+            if (response.StatusCode != HttpStatusCode.OK && response.StatusCode != HttpStatusCode.Created && response.StatusCode != HttpStatusCode.Accepted)
             {
                 error += response.StatusCode.ToString();
             }

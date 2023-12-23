@@ -22,7 +22,7 @@ namespace Vchasno.Base
         public string deal_status { get; set; }
         public string vchasno_id { get; set; }
         public string vchasno_status { get; set; }
-        public string[] company_to_glns { get; set; }
+        public List<string> company_to_glns { get; set; }
         public ItemsList as_json { get; set; }
     }
 
@@ -30,7 +30,7 @@ namespace Vchasno.Base
     {
         public DateTime date { get; set; } //string
         public object type { get; set; }
-        public Item[] items { get; set; }
+        public List<Item> items { get; set; }
         public object action { get; set; }
         public string number { get; set; }
         public string remarks { get; set; }
@@ -62,7 +62,7 @@ namespace Vchasno.Base
         public object delivery_note_number { get; set; }
         public object partial_total_number { get; set; }
         public DateTime date_expected_delivery { get; set; } //string
-        public DateTime time_expected_delivery { get; set; } //string
+        public DateTime? time_expected_delivery { get; set; } //string
         public object partial_sequence_number { get; set; }
         public string delivery_address { get; set; }
     }

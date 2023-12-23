@@ -10,11 +10,9 @@ namespace Vchasno
 {
     public static class SerializeToJson
     {
-        public static T ConvertJson<T>(this string json, out string error)
+        public static T ConvertJson<T>(this string json, ref string error)
         {
             T result;
-            error = "";
-
             try
             {
                 result = JsonConvert.DeserializeObject<T>(json);

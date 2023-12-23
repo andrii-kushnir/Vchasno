@@ -15,6 +15,15 @@ namespace Vchasno
             return result;
         }
 
+        public static int StringToInt(this String data)
+        {
+            if (data == null) return 0;
+            if (Int32.TryParse(data, out int numeric))
+                return numeric;
+            else
+                return 0;
+        }
+
         public static string NullCheck(this string value)
         {
             if (string.IsNullOrEmpty(value))
